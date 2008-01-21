@@ -1,4 +1,4 @@
-<project>
+<project name="[ini4j]">
  <body>
     <menu ref="reports" />
   </body>
