@@ -66,6 +66,11 @@ public class AbstractTestBase extends TestCase
     
     protected static interface Dwarf
     {
+        String PROP_AGE = "age";
+        String PROP_WEIGHT = "weight";
+        String PROP_HEIGHT = "height";
+        String PROP_HOME_PAGE = "homePage";
+        
         int getAge();
         void setAge(int age);
         
@@ -91,6 +96,14 @@ public class AbstractTestBase extends TestCase
 
     protected static interface Dwarfs
     {
+        String PROP_BASHFUL = "bashful";
+        String PROP_DOC = "doc";
+        String PROP_DOPEY = "dopey";
+        String PROP_GRUMPY = "grumpy";
+        String PROP_HAPPY = "happy";
+        String PROP_SLEEPY = "sleepy";
+        String PROP_SNEEZY = "sneezy";
+        
         Dwarf getBashful();
         Dwarf getDoc();
         Dwarf getDopey();
