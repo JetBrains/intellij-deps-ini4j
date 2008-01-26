@@ -99,7 +99,7 @@ public class IniHandlerTest extends AbstractTestBase
         handler.handleOption(Dwarf.PROP_WEIGHT, String.valueOf(dwarf.getWeight()));
         handler.handleOption(Dwarf.PROP_HEIGHT, String.valueOf(dwarf.getHeight()));
         handler.handleOption(Dwarf.PROP_AGE, String.valueOf(dwarf.getAge()));
-        handler.handleOption(Dwarf.PROP_HOME_PAGE, "dummy");
+        handler.handleOption(EasyMock.eq(Dwarf.PROP_HOME_PAGE), (String)EasyMock.anyObject());
         handler.endSection();
         
         dwarf = dwarfs.getSleepy();
