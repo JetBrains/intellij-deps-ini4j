@@ -157,6 +157,8 @@ public class IniParser
                     {
                         throw new SAXException("Missing or invalid 'version' attribute");
                     }
+                    
+                    handler.startIni();
                 }
                 else
                 {
@@ -186,6 +188,10 @@ public class IniParser
                 if ( qname.equals(TAG_SECTION) )
                 {
                     handler.endSection();
+                }
+                else if ( qname.equals(TAG_INI))
+                {
+                    handler.endIni();
                 }
             }
         }

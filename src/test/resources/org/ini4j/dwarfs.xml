@@ -28,7 +28,7 @@
   <option key='weight' value='56.4'/>
   <option key='height' value='77.66'/>
   <option key='age' value='99'/>
-  <option key='homePage' value='http://happy.smurf'/>
+  <option key='homePage' value='dummy'/>
  </section>
  <section key='sleepy'>
   <option key='weight' value='76.11'/>
@@ -41,5 +41,8 @@
   <option key='height' value='76.88'/>
   <option key='age' value='64'/>
   <option key='homePage' value='${happy/homePage}/~sneezy'/>
+ </section>
+ <section key='happy'>
+  <option key='homePage' value='http://happy.smurf'/>
  </section>
 </ini>

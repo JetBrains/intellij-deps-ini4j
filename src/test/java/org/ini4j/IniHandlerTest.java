@@ -53,9 +53,8 @@ public class IniHandlerTest extends AbstractTestBase
         return new TestSuite(IniHandlerTest.class);
     }
     
-    public void testHandler() throws Exception
+    protected IniHandler newHandler() throws Exception
     {
-        IniParser parser = new IniParser();
         IniHandler handler = EasyMock.createMock(IniHandler.class);
         
         Dwarfs dwarfs = newDwarfs();
@@ -126,8 +125,22 @@ public class IniHandlerTest extends AbstractTestBase
         
         handler.endIni();
         
+        return handler;        
+    }
+    
+    public void testHandler() throws Exception
+    {
+        IniParser parser = new IniParser();
+        IniHandler handler;
+        
+        handler = newHandler();
         EasyMock.replay(handler);
         parser.parse(getClass().getClassLoader().getResourceAsStream(DWARFS_INI), handler);
+        EasyMock.verify(handler);
+        
+        handler = newHandler();
+        EasyMock.replay(handler);
+        parser.parseXML(getClass().getClassLoader().getResourceAsStream(DWARFS_XML), handler);
         EasyMock.verify(handler);
     }
 }
