@@ -5,11 +5,33 @@
     <artifactId>ini4j</artifactId>
     <version>0.3.0-SNAPSHOT</version>
     <name>ini4j</name>
+    <description>The [ini4j] is a simple Java API for handling configuration files in Windows .ini format. Additionally, the library includes Java Preferences API implementation based on the .ini file.</description>
     <url>http://www.ini4j.org</url>
     <scm>
         <connection>https://ini4j.svn.sourceforge.net/svnroot/ini4j</connection>
     </scm>
     <packaging>jar</packaging>
+    <licenses>
+        <license>
+            <name>Apache 2</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>    
+    <developers>
+        <developer>
+            <id>ivan</id>
+            <name>Ivan</name>
+            <email>szkiba@users.sourceforge.net</email>
+            <organization>Codehaus</organization>
+            <organizationUrl>http://mojo.codehaus.org</organizationUrl>
+            <roles>
+                <role>architect</role>
+                <role>developer</role>
+            </roles>
+            <timezone>-1</timezone>
+        </developer>
+    </developers>    
     <dependencies>
         <dependency>
             <groupId>javax.servlet</groupId>
@@ -72,67 +94,67 @@
             
         </plugins>
     </build>
-
-
- <reporting>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-jxr-plugin</artifactId>
-            <configuration>
-                <inputEncoding>UTF-8</inputEncoding>
-            </configuration>
-       </plugin>
-
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>jdepend-maven-plugin</artifactId>
-      </plugin>       
-       
-       <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-surefire-report-plugin</artifactId>
-       </plugin>
-
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-javadoc-plugin</artifactId>
-      </plugin>
-
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>taglist-maven-plugin</artifactId>
-          <configuration>
-            <tags>
-              <tag>TODO</tag>
-              <tag>FIXME</tag>
-              <tag>XXX</tag>
-            </tags>
-         </configuration>        
-      </plugin>
-      
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>cobertura-maven-plugin</artifactId>
-      </plugin>
-      
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-project-info-reports-plugin</artifactId>
-         <reportSets>
-          <reportSet>
-           <reports>
-             <report>index</report>
-             <report>summary</report>
-             <report>cim</report>
-             <report>dependencies</report>
-           </reports>
-         </reportSet>
-       </reportSets>
-      </plugin>      
-      
-    </plugins>      
-  </reporting>
+    
+    
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jxr-plugin</artifactId>
+                <configuration>
+                    <inputEncoding>UTF-8</inputEncoding>
+                </configuration>
+            </plugin>
+            
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>jdepend-maven-plugin</artifactId>
+            </plugin>       
+            
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-report-plugin</artifactId>
+            </plugin>
+            
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+            </plugin>
+            
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>taglist-maven-plugin</artifactId>
+                <configuration>
+                    <tags>
+                        <tag>TODO</tag>
+                        <tag>FIXME</tag>
+                        <tag>XXX</tag>
+                    </tags>
+                </configuration>        
+            </plugin>
+            
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>cobertura-maven-plugin</artifactId>
+            </plugin>
+            
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-project-info-reports-plugin</artifactId>
+                <reportSets>
+                    <reportSet>
+                        <reports>
+                            <report>index</report>
+                            <report>summary</report>
+                            <report>cim</report>
+                            <report>dependencies</report>
+                        </reports>
+                    </reportSet>
+                </reportSets>
+            </plugin>      
+            
+        </plugins>      
+    </reporting>
     
     
 </project>

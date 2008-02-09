@@ -1,0 +1,10 @@
+   ----
+   Release notes
+
+Release notes
+
+* 0.3.0
+
+    * Migration to SVN from CVS
+
+    * Migration to Maven from Ant
