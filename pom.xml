@@ -3,13 +3,13 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.ini4j</groupId>
     <artifactId>ini4j</artifactId>
-    <version>0.3.0-SNAPSHOT</version>
+    <version>0.3.0</version>
     <name>ini4j</name>
     <description>The [ini4j] is a simple Java API for handling configuration files in Windows .ini format. Additionally, the library includes Java Preferences API implementation based on the .ini file.</description>
     <packaging>jar</packaging>
     <url>http://www.ini4j.org</url>
     <scm>
-        <connection>scm:svn:https://ini4j.svn.sourceforge.net/svnroot/ini4j</connection>
+        <connection>scm:svn:https://ini4j.svn.sourceforge.net/svnroot/ini4j/ini4j-0.3.0</connection>
     </scm>
     <distributionManagement>
         <site>
@@ -146,13 +146,13 @@
                         <phase>test</phase>
                         <configuration>
                             <tasks>
-                                <property name="src" value="src/test/java/org/ini4j/sample"/>
-                                <property name="dst" value="${project.build.directory}/site/sample"/>
-                                <mkdir dir="${dst}"/>
+                                <property name="src" value="src/test/java/org/ini4j/sample" />
+                                <property name="dst" value="${project.build.directory}/site/sample" />
+                                <mkdir dir="${dst}" />
                                 <copy todir="${dst}">
-                                    <fileset dir="${src}"/>
+                                    <fileset dir="${src}" />
                                 </copy>
-                                <copy file="${src}/dwarfs.ini" tofile="${dst}/dwarfs.ini.txt"/>
+                                <copy file="${src}/dwarfs.ini" tofile="${dst}/dwarfs.ini.txt" />
                             </tasks>
                         </configuration>
                         <goals>
