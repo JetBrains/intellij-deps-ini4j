@@ -3,8 +3,8 @@
 
 Release notes
 
-* 0.3.0
+* 0.3.0 (2008-02-10)
 
-    * Migration to SVN from CVS
+    * Migration: CVS to SVN
 
-    * Migration to Maven from Ant
+    * Migration: Ant to Maven

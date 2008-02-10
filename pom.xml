@@ -8,7 +8,7 @@
     <description>The [ini4j] is a simple Java API for handling configuration files in Windows .ini format. Additionally, the library includes Java Preferences API implementation based on the .ini file.</description>
     <url>http://www.ini4j.org</url>
     <scm>
-        <connection>https://ini4j.svn.sourceforge.net/svnroot/ini4j</connection>
+        <connection>scm:svn:https://ini4j.svn.sourceforge.net/svnroot/ini4j</connection>
     </scm>
     <packaging>jar</packaging>
     <licenses>
@@ -89,6 +89,33 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <configuration>
                     <forkMode>pertest</forkMode>
+                </configuration>
+            </plugin>
+            
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <configuration>
+                    <descriptorRefs>
+                        <descriptorRef>src</descriptorRef>
+                        <descriptorRef>bin</descriptorRef>
+                    </descriptorRefs>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>make-assembly</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>attached</goal>
+                        </goals>
+                    </execution>
+                </executions>                
+            </plugin>
+            
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <configuration>
+                    <tagBase>https://ini4j.svn.sourceforge.net/svnroot/ini4j/TAGS</tagBase>
                 </configuration>
             </plugin>
             
