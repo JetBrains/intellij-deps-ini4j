@@ -11,7 +11,7 @@ Samples
  But don't worry - your browser has a Back button, don't be afraid to use it :-)
 
  The sample programs expect the .ini file as a command line argument. If there is no such argument,
- they use the {{{sample/sample.ini.txt}sample.ini}} file.
+ they use the {{{sample/dwarfs.ini.txt}dwarfs.ini}} file.
 
 
 
