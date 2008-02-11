@@ -3,6 +3,11 @@
 
 Change log
 
+* 0.3.1 (2008-02-11)
+
+    * Added maven repository support: http://www.ini4j.org/repository/release
+      and http://www.ini4j.org/repository/snapshot
+
 * 0.3.0 (2008-02-10)
 
     * Migration: CVS to SVN

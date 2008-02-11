@@ -29,7 +29,6 @@
             <item name="TODO" href="todo.html"/>
             <item name="Project" href="http://sourceforge.net/projects/ini4j"/>
             <item name="Links" href="links.html" />
-            <item name="License" href="license.txt"/>
         </menu>    
         <menu ref="reports" />
     </body>

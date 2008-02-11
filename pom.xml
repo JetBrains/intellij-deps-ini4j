@@ -12,6 +12,16 @@
         <connection>scm:svn:https://ini4j.svn.sourceforge.net/svnroot/ini4j</connection>
     </scm>
     <distributionManagement>
+        <repository>
+            <id>ini4j-release</id>
+            <name>[ini4j] releases on SourceForge</name>
+            <url>scp://shell.sourceforge.net/home/groups/i/in/ini4j/repository/release</url>
+        </repository>
+        <snapshotRepository>
+            <id>ini4j-snapshot</id>
+            <name>[ini4j] snapshots on SourceForge</name>
+            <url>scp://shell.sourceforge.net/home/groups/i/in/ini4j/repository/snapshot</url>
+        </snapshotRepository>
         <site>
             <id>ini4j-site</id>
             <name>[ini4j] site on SourceForge</name>
@@ -29,7 +39,7 @@
         <developer>
             <id>ivan</id>
             <name>Ivan Szkiba</name>
-            <email>szkiba@users.sourceforge.net</email>
+            <email>szkiba at SourceForge</email>
             <roles>
                 <role>architect</role>
                 <role>developer</role>
@@ -120,15 +130,6 @@
                         <descriptorRef>bin</descriptorRef>
                     </descriptorRefs>
                 </configuration>
-                <executions>
-                    <execution>
-                        <id>make-assembly</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>attached</goal>
-                        </goals>
-                    </execution>
-                </executions>                
             </plugin>
             
             <plugin>
@@ -215,7 +216,8 @@
                         <reports>
                             <report>index</report>
                             <report>summary</report>
-                            <report>cim</report>
+                            <report>license</report>
+                            <report>project-team</report>
                             <report>dependencies</report>
                         </reports>
                     </reportSet>
