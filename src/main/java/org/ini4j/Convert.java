@@ -18,6 +18,8 @@ package org.ini4j;
 
 class Convert
 {
+    private static final char HEX[] = "0123456789abcdef".toCharArray();
+
     protected static String escape(String line)
     {
         int len = line.length();
@@ -38,7 +40,10 @@ class Convert
                 if ((c < 0x0020) || (c > 0x007e))
                 {
                     buffer.append("\\u");
-                    buffer.append(Integer.toHexString(c));
+                    buffer.append( HEX[(c >>> 12) & 0x0f] );
+                    buffer.append( HEX[(c >>> 8) & 0x0f] );
+                    buffer.append( HEX[(c >>> 4) & 0x0f] );
+                    buffer.append( HEX[c & 0x0f] );
                 }
                 else
                 {

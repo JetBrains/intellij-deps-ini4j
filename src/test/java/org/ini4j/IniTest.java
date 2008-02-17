@@ -24,12 +24,15 @@ import junit.framework.Test;
 import junit.framework.TestSuite;
 
 ///CLOVER:OFF
+import org.mortbay.util.ByteArrayOutputStream2;
 
 /**
  * JUnit test of Ini class.
  */
 public class IniTest extends AbstractTestBase
 {
+    private static final String UNICODE_STRING = "áÁéÉíÍóÓöÖőŐúÚüÜűŰ-ÄÖÜäöü";
+    
     /**
      * Instantiate test.
      *
@@ -283,6 +286,23 @@ public class IniTest extends AbstractTestBase
         
         // set section property is invalid operation
         tale.setSnowwhite(sw);
+    }
+    
+    public void testUnicode() throws Exception
+    {
+        Ini orig = new Ini();
+        Ini.Section bashful = orig.add(Dwarfs.PROP_BASHFUL);
+        
+        bashful.put(Dwarf.PROP_HOME_PAGE, UNICODE_STRING);
+        
+        ByteArrayOutputStream out = new ByteArrayOutputStream();
+        
+        orig.store(out);
+        
+        Ini saved = new Ini(new ByteArrayInputStream(out.toByteArray()));
+        Ini.Section bashfulSaved = saved.get(Dwarfs.PROP_BASHFUL);
+        
+        assertEquals(bashful.get(Dwarf.PROP_HOME_PAGE), bashfulSaved.get(Dwarf.PROP_HOME_PAGE));
     }
     
 }
