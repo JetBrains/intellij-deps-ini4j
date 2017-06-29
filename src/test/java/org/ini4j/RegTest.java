@@ -126,16 +126,16 @@ public class RegTest extends Ini4jCase
         }
     }
 
-    @Test public void testNonWindwosExec() throws Exception
+    @Test public void testNonWindowsExec() throws Exception
     {
-        if (isSkip(isWindows(), "testNonWindwosExec"))
+        if (isSkip(isWindows(), "testNonWindowsExec"))
         {
             return;
         }
 
         Reg reg = new Reg();
 
-        reg.exec(new String[] { "/bin/true" });
+        reg.exec(new String[] { "/bin/echo" });
         try
         {
             reg.exec(new String[] { "/bin/ls", "no such file" });
