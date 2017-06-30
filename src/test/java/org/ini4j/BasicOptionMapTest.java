@@ -90,7 +90,7 @@ public class BasicOptionMapTest extends Ini4jCase
         assertEquals(o, map.get(Dwarf.PROP_AGE));
         o = String.valueOf(DwarfsData.happy.age);
         map.add(Dwarf.PROP_AGE, o, 0);
-        assertEquals(new Integer(DwarfsData.happy.age), (Integer) map.get(Dwarf.PROP_AGE, 0, int.class));
+        assertEquals(new Integer(DwarfsData.happy.age), map.get(Dwarf.PROP_AGE, 0, int.class));
         o = String.valueOf(DwarfsData.doc.age);
         map.put(Dwarf.PROP_AGE, o, 0);
         assertEquals(DwarfsData.doc.age, (int) map.get(Dwarf.PROP_AGE, 0, int.class));

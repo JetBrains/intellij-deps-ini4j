@@ -56,8 +56,7 @@ public class IniPreferences extends AbstractPreferences
      * @throws IOException if an I/O error occured
      * @throws InvalidFileFormatException if <code>Ini</code> parsing error occured
      */
-    public IniPreferences(Reader input) throws IOException, InvalidFileFormatException
-    {
+    public IniPreferences(Reader input) throws IOException {
         super(null, "");
         _ini = new Ini(input);
     }
@@ -72,8 +71,7 @@ public class IniPreferences extends AbstractPreferences
      * @throws IOException if an I/O error occured
      * @throws InvalidFileFormatException if <code>Ini</code> parsing error occured
      */
-    public IniPreferences(InputStream input) throws IOException, InvalidFileFormatException
-    {
+    public IniPreferences(InputStream input) throws IOException {
         super(null, "");
         _ini = new Ini(input);
     }
@@ -88,8 +86,7 @@ public class IniPreferences extends AbstractPreferences
      * @throws IOException if an I/O error occured
      * @throws InvalidFileFormatException if <code>Ini</code> parsing error occured
      */
-    public IniPreferences(URL input) throws IOException, InvalidFileFormatException
-    {
+    public IniPreferences(URL input) throws IOException {
         super(null, "");
         _ini = new Ini(input);
     }

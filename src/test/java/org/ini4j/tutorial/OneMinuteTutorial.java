@@ -126,7 +126,7 @@ public class OneMinuteTutorial extends AbstractTutorial
 //|+---------+
 //|
         assertEquals(55, (int) ini.get(Dwarfs.PROP_SLEEPY, Dwarf.PROP_AGE, int.class));
-        assertEquals(45.6, (double) ini.get(Dwarfs.PROP_SLEEPY, Dwarf.PROP_WEIGHT, double.class), Helper.DELTA);
+        assertEquals(45.6, ini.get(Dwarfs.PROP_SLEEPY, Dwarf.PROP_WEIGHT, double.class), Helper.DELTA);
     }
 
 //|

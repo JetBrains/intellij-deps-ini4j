@@ -44,26 +44,22 @@ public class Ini extends BasicProfile implements Persistable, Configurable
         _config = Config.getGlobal();
     }
 
-    public Ini(Reader input) throws IOException, InvalidFileFormatException
-    {
+    public Ini(Reader input) throws IOException {
         this();
         load(input);
     }
 
-    public Ini(InputStream input) throws IOException, InvalidFileFormatException
-    {
+    public Ini(InputStream input) throws IOException {
         this();
         load(input);
     }
 
-    public Ini(URL input) throws IOException, InvalidFileFormatException
-    {
+    public Ini(URL input) throws IOException {
         this();
         load(input);
     }
 
-    public Ini(File input) throws IOException, InvalidFileFormatException
-    {
+    public Ini(File input) throws IOException {
         this();
         _file = input;
         load();
@@ -89,8 +85,7 @@ public class Ini extends BasicProfile implements Persistable, Configurable
         _file = value;
     }
 
-    @Override public void load() throws IOException, InvalidFileFormatException
-    {
+    @Override public void load() throws IOException {
         if (_file == null)
         {
             throw new FileNotFoundException();
@@ -99,23 +94,19 @@ public class Ini extends BasicProfile implements Persistable, Configurable
         load(_file);
     }
 
-    @Override public void load(InputStream input) throws IOException, InvalidFileFormatException
-    {
+    @Override public void load(InputStream input) throws IOException {
         load(new InputStreamReader(input, getConfig().getFileEncoding()));
     }
 
-    @Override public void load(Reader input) throws IOException, InvalidFileFormatException
-    {
+    @Override public void load(Reader input) throws IOException {
         IniParser.newInstance(getConfig()).parse(input, newBuilder());
     }
 
-    @Override public void load(File input) throws IOException, InvalidFileFormatException
-    {
+    @Override public void load(File input) throws IOException {
         load(input.toURI().toURL());
     }
 
-    @Override public void load(URL input) throws IOException, InvalidFileFormatException
-    {
+    @Override public void load(URL input) throws IOException {
         IniParser.newInstance(getConfig()).parse(input, newBuilder());
     }
 

@@ -53,7 +53,7 @@ public class AbstractBeanInvocationHandlerTest extends Ini4jCase
         Integer i = new Integer(23);
 
         map.put(PROP_AGE, "23");
-        assertEquals(i, (Integer) handler.getProperty(PROP_AGE, Integer.class));
+        assertEquals(i, handler.getProperty(PROP_AGE, Integer.class));
         assertTrue(handler.hasProperty(PROP_AGE));
         assertFalse(handler.hasProperty(null));
         map.put(PROP_AGE, "?.");
@@ -224,7 +224,7 @@ public class AbstractBeanInvocationHandlerTest extends Ini4jCase
         d.removeVetoableChangeListener(PROP_HEIGHT, l);
     }
 
-    static interface Dummy
+    interface Dummy
     {
         boolean isDummy();
 

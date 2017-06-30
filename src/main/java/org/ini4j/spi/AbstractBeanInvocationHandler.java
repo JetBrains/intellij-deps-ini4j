@@ -37,7 +37,7 @@ public abstract class AbstractBeanInvocationHandler implements InvocationHandler
     private static final String WRITE_PREFIX = "set";
     private static final String HAS_PREFIX = "has";
 
-    private static enum Prefix
+    private enum Prefix
     {
         READ(READ_PREFIX),
         READ_BOOLEAN(READ_BOOLEAN_PREFIX),
@@ -50,7 +50,7 @@ public abstract class AbstractBeanInvocationHandler implements InvocationHandler
         private int _len;
         private String _value;
 
-        private Prefix(String value)
+        Prefix(String value)
         {
             _value = value;
             _len = value.length();

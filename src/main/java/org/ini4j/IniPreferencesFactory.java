@@ -94,7 +94,7 @@ public class IniPreferencesFactory implements PreferencesFactory
         }
         catch (Exception x)
         {
-            throw (IllegalArgumentException) new IllegalArgumentException().initCause(x);
+            throw new IllegalArgumentException(x);
         }
     }
 
@@ -106,7 +106,7 @@ public class IniPreferencesFactory implements PreferencesFactory
         }
         catch (Exception x)
         {
-            throw (IllegalArgumentException) new IllegalArgumentException().initCause(x);
+            throw new IllegalArgumentException(x);
         }
     }
 
@@ -123,7 +123,7 @@ public class IniPreferencesFactory implements PreferencesFactory
             }
             catch (Exception x)
             {
-                throw (IllegalArgumentException) new IllegalArgumentException().initCause(x);
+                throw new IllegalArgumentException(x);
             }
         }
 

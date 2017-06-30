@@ -46,26 +46,22 @@ public class Options extends BasicOptionMap implements Persistable, Configurable
         _config.setEmptyOption(true);
     }
 
-    public Options(Reader input) throws IOException, InvalidFileFormatException
-    {
+    public Options(Reader input) throws IOException {
         this();
         load(input);
     }
 
-    public Options(InputStream input) throws IOException, InvalidFileFormatException
-    {
+    public Options(InputStream input) throws IOException {
         this();
         load(input);
     }
 
-    public Options(URL input) throws IOException, InvalidFileFormatException
-    {
+    public Options(URL input) throws IOException {
         this();
         load(input);
     }
 
-    public Options(File input) throws IOException, InvalidFileFormatException
-    {
+    public Options(File input) throws IOException {
         this();
         _file = input;
         load();
@@ -101,8 +97,7 @@ public class Options extends BasicOptionMap implements Persistable, Configurable
         _file = value;
     }
 
-    @Override public void load() throws IOException, InvalidFileFormatException
-    {
+    @Override public void load() throws IOException {
         if (_file == null)
         {
             throw new FileNotFoundException();
@@ -111,23 +106,19 @@ public class Options extends BasicOptionMap implements Persistable, Configurable
         load(_file);
     }
 
-    @Override public void load(InputStream input) throws IOException, InvalidFileFormatException
-    {
+    @Override public void load(InputStream input) throws IOException {
         load(new InputStreamReader(input, getConfig().getFileEncoding()));
     }
 
-    @Override public void load(Reader input) throws IOException, InvalidFileFormatException
-    {
+    @Override public void load(Reader input) throws IOException {
         OptionsParser.newInstance(getConfig()).parse(input, newBuilder());
     }
 
-    @Override public void load(URL input) throws IOException, InvalidFileFormatException
-    {
+    @Override public void load(URL input) throws IOException {
         OptionsParser.newInstance(getConfig()).parse(input, newBuilder());
     }
 
-    @Override public void load(File input) throws IOException, InvalidFileFormatException
-    {
+    @Override public void load(File input) throws IOException {
         load(input.toURI().toURL());
     }
 

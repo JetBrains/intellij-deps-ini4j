@@ -71,7 +71,7 @@ public class BeanTool
             }
             catch (Exception x)
             {
-                throw (IllegalArgumentException) (new IllegalArgumentException("Failed to set property: " + pd.getDisplayName(), x));
+                throw new IllegalArgumentException("Failed to set property: " + pd.getDisplayName(), x);
             }
         }
     }
@@ -246,7 +246,7 @@ public class BeanTool
         }
         catch (Exception x)
         {
-            throw (IllegalArgumentException) new IllegalArgumentException(x);
+            throw new IllegalArgumentException(x);
         }
 
         return o;
@@ -305,7 +305,7 @@ public class BeanTool
         }
         catch (Exception x)
         {
-            throw (IllegalArgumentException) new IllegalArgumentException(x);
+            throw new IllegalArgumentException(x);
         }
 
         return o;

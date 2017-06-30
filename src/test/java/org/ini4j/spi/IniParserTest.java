@@ -265,7 +265,6 @@ public class IniParserTest extends Ini4jCase
             }
             catch (InvalidFileFormatException x)
             {
-                ;
             }
         }
     }

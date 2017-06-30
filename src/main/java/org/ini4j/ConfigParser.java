@@ -194,16 +194,14 @@ public class ConfigParser implements Serializable
         return new ArrayList<String>(_ini.get(sectionName).keySet());
     }
 
-    public void read(String... filenames) throws IOException, ParsingException
-    {
+    public void read(String... filenames) throws IOException {
         for (String filename : filenames)
         {
             read(new File(filename));
         }
     }
 
-    public void read(Reader reader) throws IOException, ParsingException
-    {
+    public void read(Reader reader) throws IOException {
         try
         {
             _ini.load(reader);
@@ -214,8 +212,7 @@ public class ConfigParser implements Serializable
         }
     }
 
-    public void read(URL url) throws IOException, ParsingException
-    {
+    public void read(URL url) throws IOException {
         try
         {
             _ini.load(url);
@@ -226,8 +223,7 @@ public class ConfigParser implements Serializable
         }
     }
 
-    public void read(File file) throws IOException, ParsingException
-    {
+    public void read(File file) throws IOException {
         try
         {
             _ini.load(new FileReader(file));
@@ -238,8 +234,7 @@ public class ConfigParser implements Serializable
         }
     }
 
-    public void read(InputStream stream) throws IOException, ParsingException
-    {
+    public void read(InputStream stream) throws IOException {
         try
         {
             _ini.load(stream);

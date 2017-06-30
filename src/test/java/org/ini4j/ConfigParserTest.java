@@ -484,7 +484,6 @@ public class ConfigParserTest extends Ini4jCase
         }
         catch (ConfigParser.InterpolationMissingOptionException x)
         {
-            ;
         }
     }
 }

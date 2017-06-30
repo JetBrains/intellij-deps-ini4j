@@ -34,11 +34,11 @@ import java.io.StringReader;
 
 public class DemoModel implements Runnable
 {
-    public static enum Mode
+    public enum Mode
     {
         INI,
         REG,
-        OPTIONS;
+        OPTIONS
     }
 
     private Persistable _data;

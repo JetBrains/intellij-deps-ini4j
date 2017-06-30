@@ -30,15 +30,15 @@ public interface Persistable
 
     void setFile(File value);
 
-    void load() throws IOException, InvalidFileFormatException;
+    void load() throws IOException;
 
-    void load(InputStream input) throws IOException, InvalidFileFormatException;
+    void load(InputStream input) throws IOException;
 
-    void load(Reader input) throws IOException, InvalidFileFormatException;
+    void load(Reader input) throws IOException;
 
-    void load(File input) throws IOException, InvalidFileFormatException;
+    void load(File input) throws IOException;
 
-    void load(URL input) throws IOException, InvalidFileFormatException;
+    void load(URL input) throws IOException;
 
     void store() throws IOException;
 

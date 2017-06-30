@@ -62,8 +62,7 @@ final class ServiceFinder
         }
         catch (Exception x)
         {
-            throw (IllegalArgumentException) new IllegalArgumentException("Provider " + clazz.getName() + " could not be instantiated: " + x)
-              .initCause(x);
+            throw new IllegalArgumentException("Provider " + clazz.getName() + " could not be instantiated: " + x, x);
         }
     }
 
@@ -82,7 +81,7 @@ final class ServiceFinder
             }
             catch (ClassNotFoundException x)
             {
-                throw (IllegalArgumentException) new IllegalArgumentException("Provider " + serviceClassName + " not found").initCause(x);
+                throw new IllegalArgumentException("Provider " + serviceClassName + " not found", x);
             }
         }
 

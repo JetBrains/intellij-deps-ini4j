@@ -42,27 +42,23 @@ public class Wini extends Ini
         setConfig(cfg);
     }
 
-    public Wini(File input) throws IOException, InvalidFileFormatException
-    {
+    public Wini(File input) throws IOException {
         this();
         setFile(input);
         load();
     }
 
-    public Wini(URL input) throws IOException, InvalidFileFormatException
-    {
+    public Wini(URL input) throws IOException {
         this();
         load(input);
     }
 
-    public Wini(InputStream input) throws IOException, InvalidFileFormatException
-    {
+    public Wini(InputStream input) throws IOException {
         this();
         load(input);
     }
 
-    public Wini(Reader input) throws IOException, InvalidFileFormatException
-    {
+    public Wini(Reader input) throws IOException {
         this();
         load(input);
     }

@@ -28,7 +28,7 @@ public interface Registry extends Profile
         HKEY_CURRENT_CONFIG,
         HKEY_CURRENT_USER,
         HKEY_LOCAL_MACHINE,
-        HKEY_USERS;
+        HKEY_USERS
     }
 
     // TODO handle delete operations with special Type
@@ -63,7 +63,7 @@ public interface Registry extends Profile
         public static final String REMOVE = String.valueOf(REMOVE_CHAR);
         private final String _prefix;
 
-        private Type(String prefix)
+        Type(String prefix)
         {
             _prefix = prefix;
         }

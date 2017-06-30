@@ -116,7 +116,6 @@ public class BeanToolTest extends Ini4jCase
         }
         catch (IllegalArgumentException x)
         {
-            ;
         }
 
         // invalid primitive value mean exception
@@ -127,7 +126,6 @@ public class BeanToolTest extends Ini4jCase
         }
         catch (IllegalArgumentException x)
         {
-            ;
         }
 
         // standard, but not primitive types
@@ -152,7 +150,6 @@ public class BeanToolTest extends Ini4jCase
         }
         catch (IllegalArgumentException x)
         {
-            ;
         }
     }
 

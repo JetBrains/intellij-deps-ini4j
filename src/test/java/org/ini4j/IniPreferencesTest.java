@@ -145,7 +145,6 @@ public class IniPreferencesTest extends Ini4jCase
         }
         catch (UnsupportedOperationException x)
         {
-            ;
         }
 
         try
@@ -155,7 +154,6 @@ public class IniPreferencesTest extends Ini4jCase
         }
         catch (UnsupportedOperationException x)
         {
-            ;
         }
 
         try
@@ -165,7 +163,6 @@ public class IniPreferencesTest extends Ini4jCase
         }
         catch (UnsupportedOperationException x)
         {
-            ;
         }
 
         try
@@ -175,7 +172,6 @@ public class IniPreferencesTest extends Ini4jCase
         }
         catch (UnsupportedOperationException x)
         {
-            ;
         }
     }
 

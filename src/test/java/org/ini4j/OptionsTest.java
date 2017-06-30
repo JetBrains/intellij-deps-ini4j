@@ -194,7 +194,6 @@ public class OptionsTest extends Ini4jCase
             }
             catch (InvalidFileFormatException x)
             {
-                ;
             }
         }
     }

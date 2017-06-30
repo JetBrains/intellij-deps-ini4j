@@ -373,12 +373,12 @@ public class BasicProfileTest extends Ini4jCase
         prof.remove(dup);
     }
 
-    public static interface DwarfsRW extends Dwarfs
+    public interface DwarfsRW extends Dwarfs
     {
         void setBashful(Dwarf value);
     }
 
-    public static interface Global
+    public interface Global
     {
         Section[] getMissing();
 
@@ -395,7 +395,7 @@ public class BasicProfileTest extends Ini4jCase
         boolean hasSection();
     }
 
-    public static interface Section
+    public interface Section
     {
         URI[] getLocation();
 

@@ -62,7 +62,6 @@ public class IniPreferencesFactoryTest extends Ini4jCase
         }
         catch (IllegalArgumentException x)
         {
-            ;
         }
     }
 

@@ -64,7 +64,6 @@ public final class DwarfsData implements Dwarfs
     @SuppressWarnings("empty-statement")
     private DwarfsData()
     {
-        ;
     }
 
     public Dwarf getBashful()

@@ -222,7 +222,6 @@ public class OptionsFormatterTest extends Ini4jCase
         StringWriter stringWriter;
         PrintWriter printWriter;
 
-        ;
         Config cfg = new Config();
         OptionsFormatter instance;
 

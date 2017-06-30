@@ -84,23 +84,19 @@ public class WiniTest extends Ini4jCase
     {
         private boolean _ok;
 
-        public WiniHelper(Reader input) throws IOException, InvalidFileFormatException
-        {
+        public WiniHelper(Reader input) throws IOException {
             super(input);
         }
 
-        public WiniHelper(InputStream input) throws IOException, InvalidFileFormatException
-        {
+        public WiniHelper(InputStream input) throws IOException {
             super(input);
         }
 
-        public WiniHelper(URL input) throws IOException, InvalidFileFormatException
-        {
+        public WiniHelper(URL input) throws IOException {
             super(input);
         }
 
-        public WiniHelper(File input) throws IOException, InvalidFileFormatException
-        {
+        public WiniHelper(File input) throws IOException {
             super(input);
         }
 
@@ -109,23 +105,19 @@ public class WiniTest extends Ini4jCase
             return _ok;
         }
 
-        @Override public void load(InputStream input) throws IOException, InvalidFileFormatException
-        {
+        @Override public void load(InputStream input) throws IOException {
             _ok = true;
         }
 
-        @Override public void load(Reader input) throws IOException, InvalidFileFormatException
-        {
+        @Override public void load(Reader input) throws IOException {
             _ok = true;
         }
 
-        @Override public void load(File input) throws IOException, InvalidFileFormatException
-        {
+        @Override public void load(File input) throws IOException {
             _ok = true;
         }
 
-        @Override public void load(URL input) throws IOException, InvalidFileFormatException
-        {
+        @Override public void load(URL input) throws IOException {
             _ok = true;
         }
     }

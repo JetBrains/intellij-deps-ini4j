@@ -136,7 +136,7 @@ public class BasicProfile extends CommonMultiMap<String, Profile.Section> implem
 
     @Override public Section remove(Section section)
     {
-        return remove((Object) section.getName());
+        return remove(section.getName());
     }
 
     @Override public String remove(Object sectionName, Object optionName)

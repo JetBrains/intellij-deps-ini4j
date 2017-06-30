@@ -27,7 +27,7 @@ class UnicodeInputStreamReader extends Reader
 {
     private static final int BOM_SIZE = 4;
 
-    private static enum Bom
+    private enum Bom
     {
         UTF32BE("UTF-32BE", new byte[] { (byte) 0x00, (byte) 0x00, (byte) 0xFE, (byte) 0xFF }),
         UTF32LE("UTF-32LE", new byte[] { (byte) 0xFF, (byte) 0xFE, (byte) 0x00, (byte) 0x00 }),
@@ -38,7 +38,7 @@ class UnicodeInputStreamReader extends Reader
         private Charset _charset;
 
         @SuppressWarnings("PMD.ArrayIsStoredDirectly")
-        private Bom(String charsetName, byte[] bytes)
+        Bom(String charsetName, byte[] bytes)
         {
             try
             {

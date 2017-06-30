@@ -48,23 +48,19 @@ public class OptionsParser extends AbstractParser
         return instance;
     }
 
-    public void parse(InputStream input, OptionsHandler handler) throws IOException, InvalidFileFormatException
-    {
+    public void parse(InputStream input, OptionsHandler handler) throws IOException {
         parse(newIniSource(input, handler), handler);
     }
 
-    public void parse(Reader input, OptionsHandler handler) throws IOException, InvalidFileFormatException
-    {
+    public void parse(Reader input, OptionsHandler handler) throws IOException {
         parse(newIniSource(input, handler), handler);
     }
 
-    public void parse(URL input, OptionsHandler handler) throws IOException, InvalidFileFormatException
-    {
+    public void parse(URL input, OptionsHandler handler) throws IOException {
         parse(newIniSource(input, handler), handler);
     }
 
-    private void parse(IniSource source, OptionsHandler handler) throws IOException, InvalidFileFormatException
-    {
+    private void parse(IniSource source, OptionsHandler handler) throws IOException {
         handler.startOptions();
         for (String line = source.readLine(); line != null; line = source.readLine())
         {
