@@ -52,23 +52,19 @@ public class IniParser extends AbstractParser
         return instance;
     }
 
-    public void parse(InputStream input, IniHandler handler) throws IOException, InvalidFileFormatException
-    {
+    public void parse(InputStream input, IniHandler handler) throws IOException {
         parse(newIniSource(input, handler), handler);
     }
 
-    public void parse(Reader input, IniHandler handler) throws IOException, InvalidFileFormatException
-    {
+    public void parse(Reader input, IniHandler handler) throws IOException {
         parse(newIniSource(input, handler), handler);
     }
 
-    public void parse(URL input, IniHandler handler) throws IOException, InvalidFileFormatException
-    {
+    public void parse(URL input, IniHandler handler) throws IOException {
         parse(newIniSource(input, handler), handler);
     }
 
-    private void parse(IniSource source, IniHandler handler) throws IOException, InvalidFileFormatException
-    {
+    private void parse(IniSource source, IniHandler handler) throws IOException {
         handler.startIni();
         String sectionName = null;
 
@@ -114,9 +110,18 @@ public class IniParser extends AbstractParser
     {
         String sectionName;
 
-        if (line.charAt(line.length() - 1) != SECTION_END)
+      if (line.charAt(line.length() - 1) != SECTION_END)
         {
+          int sectionEnd = line.lastIndexOf(SECTION_END);
+          String afterSectionEnd = line.substring(sectionEnd + 1).trim();
+          if (afterSectionEnd.isEmpty() || isComment(afterSectionEnd.charAt(0)))
+          {
+            line = line.substring(0, sectionEnd + 1);
+          }
+          else
+          {
             parseError(line, source.getLineNumber());
+          }
         }
 
         sectionName = unescapeKey(line.substring(1, line.length() - 1).trim());
@@ -133,5 +138,9 @@ public class IniParser extends AbstractParser
         handler.startSection(sectionName);
 
         return sectionName;
+    }
+
+    private boolean isComment(char c) {
+      return COMMENTS.indexOf(c) >= 0;
     }
 }
