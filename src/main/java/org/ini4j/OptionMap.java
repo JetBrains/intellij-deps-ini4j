@@ -25,6 +25,8 @@ public interface OptionMap extends MultiMap<String, String>, CommentedMap<String
 
     <T> T as(Class<T> clazz);
 
+    <T> T as(Class<T> clazz, ClassLoader classLoader);
+
     <T> T as(Class<T> clazz, String keyPrefix);
 
     String fetch(Object key);

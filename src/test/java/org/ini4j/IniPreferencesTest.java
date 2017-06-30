@@ -181,7 +181,7 @@ public class IniPreferencesTest extends Ini4jCase
 
     private Dwarf newDwarf(Preferences node)
     {
-        return BeanTool.getInstance().proxy(Dwarf.class, new Access(node));
+        return BeanTool.getInstance().proxy(Dwarf.class, new Access(node), null);
     }
 
     public static class Access implements BeanAccess

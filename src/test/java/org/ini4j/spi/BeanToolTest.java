@@ -159,7 +159,7 @@ public class BeanToolTest extends Ini4jCase
     @Test public void testSetGet() throws Exception
     {
         TestMap map = new TestMap();
-        Dwarf proxy = instance.proxy(Dwarf.class, map.newBeanAccess());
+        Dwarf proxy = instance.proxy(Dwarf.class, map.newBeanAccess(), null);
 
         assertNull(proxy.getHomeDir());
         assertFalse(proxy.hasHomePage());
@@ -232,7 +232,7 @@ public class BeanToolTest extends Ini4jCase
         //
         // bean interface
         //
-        Dwarf proxy = instance.proxy(Dwarf.class, map.newBeanAccess(prefix));
+        Dwarf proxy = instance.proxy(Dwarf.class, map.newBeanAccess(prefix), null);
 
         assertEquals(23, proxy.getAge());
         assertEquals(5.3, proxy.getHeight(), Helper.DELTA);

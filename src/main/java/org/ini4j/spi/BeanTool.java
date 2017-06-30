@@ -71,8 +71,7 @@ public class BeanTool
             }
             catch (Exception x)
             {
-                throw (IllegalArgumentException) (new IllegalArgumentException("Failed to set property: " + pd.getDisplayName()).initCause(
-                        x));
+                throw (IllegalArgumentException) (new IllegalArgumentException("Failed to set property: " + pd.getDisplayName(), x));
             }
         }
     }
@@ -156,10 +155,12 @@ public class BeanTool
         return (T) o;
     }
 
-    public <T> T proxy(Class<T> clazz, BeanAccess props)
-    {
-        return clazz.cast(Proxy.newProxyInstance(Thread.currentThread().getContextClassLoader(), new Class[] { clazz },
-                    new BeanInvocationHandler(props)));
+    public <T> T proxy(Class<T> clazz, BeanAccess props, ClassLoader classLoader) {
+        if (classLoader == null) {
+          classLoader = Thread.currentThread().getContextClassLoader();
+        }
+        return clazz.cast(Proxy.newProxyInstance(classLoader, new Class[]{clazz},
+                new BeanInvocationHandler(props)));
     }
 
     @SuppressWarnings("unchecked")
@@ -238,14 +239,14 @@ public class BeanTool
 
                 // TODO handle constructor with String arg as converter from String
                 // look for "valueOf" converter method
-                Method parser = clazz.getMethod(PARSE_METHOD, new Class[] { String.class });
+                Method parser = clazz.getMethod(PARSE_METHOD, String.class);
 
-                o = parser.invoke(null, new Object[] { value });
+                o = parser.invoke(null, value);
             }
         }
         catch (Exception x)
         {
-            throw (IllegalArgumentException) new IllegalArgumentException().initCause(x);
+            throw (IllegalArgumentException) new IllegalArgumentException(x);
         }
 
         return o;
@@ -304,7 +305,7 @@ public class BeanTool
         }
         catch (Exception x)
         {
-            throw (IllegalArgumentException) new IllegalArgumentException().initCause(x);
+            throw (IllegalArgumentException) new IllegalArgumentException(x);
         }
 
         return o;

@@ -76,12 +76,17 @@ public class BasicOptionMap extends CommonMultiMap<String, String> implements Op
 
     @Override public <T> T as(Class<T> clazz)
     {
-        return BeanTool.getInstance().proxy(clazz, getDefaultBeanAccess());
+        return BeanTool.getInstance().proxy(clazz, getDefaultBeanAccess(), null);
+    }
+
+    @Override public <T> T as(Class<T> clazz, ClassLoader classLoader)
+    {
+        return BeanTool.getInstance().proxy(clazz, getDefaultBeanAccess(), classLoader);
     }
 
     @Override public <T> T as(Class<T> clazz, String keyPrefix)
     {
-        return BeanTool.getInstance().proxy(clazz, newBeanAccess(keyPrefix));
+        return BeanTool.getInstance().proxy(clazz, newBeanAccess(keyPrefix), null);
     }
 
     @Override public String fetch(Object key)
