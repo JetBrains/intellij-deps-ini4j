@@ -228,7 +228,7 @@
                                 <goals>
                                     <goal>translate</goal>
                                 </goals>
-                                <phase>process-classes</phase>
+                                <phase>none</phase>
                                 <configuration>
                                     <destdir>${project.build.directory}/classes-jdk14</destdir>
                                     <filesets>
@@ -245,7 +245,7 @@
                                 <goals>
                                     <goal>translate</goal>
                                 </goals>
-                                <phase>process-test-classes</phase>
+                                <phase>none</phase>
                                 <configuration>
                                     <destdir>${project.build.directory}/test-classes-jdk14</destdir>
                                     <filesets>
@@ -265,6 +265,7 @@
                                 <goals>
                                     <goal>translate-project</goal>
                                 </goals>
+                                <phase>none</phase>
                                 <configuration>
                                     <classifier>jdk14</classifier>
                                     <attach>true</attach>
@@ -371,7 +372,7 @@
                 <executions>
                     <execution>
                         <id>sign-artifacts</id>
-                        <phase>verify</phase>
+                        <phase>none</phase>
                         <goals>
                             <goal>sign</goal>
                         </goals>
@@ -499,7 +500,7 @@
                 <executions>
                     <execution>
                         <id>zip</id>
-                        <phase>deploy</phase>
+                        <phase>none</phase>
                         <goals>
                             <goal>single</goal>
                         </goals>
@@ -514,7 +515,7 @@
                     </execution>
                     <execution>
                         <id>demo</id>
-                        <phase>package</phase>
+                        <phase>none</phase>
                         <goals>
                             <goal>single</goal>
                         </goals>
