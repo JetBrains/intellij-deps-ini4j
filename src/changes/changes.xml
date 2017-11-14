@@ -21,6 +21,8 @@
     <title>[ini4j] Changes</title>
   </properties>
   <body>
+    <release version="0.5.5-1" date="2017-11-14"
+             description="Setup publishing to IntelliJ Dependencies repository"/>
     <release version="0.5.5-patched" date="2017-06-30" description="IDEA Patches applied">
       <action type="add" dev="dmitriysmirnovjb" >
         Add IDEA patches:
