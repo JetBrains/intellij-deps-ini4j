@@ -32,7 +32,6 @@
         Add IDEA patches:
         Patch 1: Let OptionMap.as accept ClassLoader as the second argument
         Patch 2: Let comment be on the same line as section header
-        Patch 3: Add case-insensitive parsing mode
       </action>
     </release>
     <release version="0.5.5" date="2015-02-17" description="Bugfix release">
