@@ -37,12 +37,14 @@ public class IniBuilder extends AbstractProfileBuilder implements IniHandler
         _ini = value;
     }
 
-    @Override Config getConfig()
+    @Override
+    protected Config getConfig()
     {
         return _ini.getConfig();
     }
 
-    @Override Profile getProfile()
+    @Override
+    protected Profile getProfile()
     {
         return _ini;
     }
