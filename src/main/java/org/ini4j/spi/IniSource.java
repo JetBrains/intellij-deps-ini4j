@@ -21,7 +21,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.LineNumberReader;
 import java.io.Reader;
-
 import java.net.URL;
 
 class IniSource
@@ -114,7 +113,11 @@ class IniSource
     {
         if (buff.length() != 0)
         {
-            buff.deleteCharAt(buff.length() - 1);
+            String lineSeparator = _config.getLineSeparator();
+
+            if (lineSeparator.length() <= buff.length()) {
+                buff.delete(buff.length() - lineSeparator.length(), buff.length());
+            }
             _handler.handleComment(buff.toString());
             buff.delete(0, buff.length());
         }
