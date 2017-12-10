@@ -21,7 +21,6 @@ import org.ini4j.spi.IniHandler;
 
 import java.lang.reflect.Array;
 import java.lang.reflect.Proxy;
-
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -199,7 +198,7 @@ public class BasicProfile extends CommonMultiMap<String, Profile.Section> implem
         }
     }
 
-    void store(IniHandler formatter)
+    protected void store(IniHandler formatter)
     {
         formatter.startIni();
         store(formatter, getComment());
@@ -211,7 +210,7 @@ public class BasicProfile extends CommonMultiMap<String, Profile.Section> implem
         formatter.endIni();
     }
 
-    void store(IniHandler formatter, Section s)
+    protected void store(IniHandler formatter, Section s)
     {
         store(formatter, getComment(s.getName()));
         formatter.startSection(s.getName());
@@ -223,12 +222,12 @@ public class BasicProfile extends CommonMultiMap<String, Profile.Section> implem
         formatter.endSection();
     }
 
-    void store(IniHandler formatter, String comment)
+    protected void store(IniHandler formatter, String comment)
     {
         formatter.handleComment(comment);
     }
 
-    void store(IniHandler formatter, Section section, String option)
+    protected void store(IniHandler formatter, Section section, String option)
     {
         store(formatter, section.getComment(option));
         int n = section.length(option);
