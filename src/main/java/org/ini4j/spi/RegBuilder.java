@@ -18,7 +18,6 @@ package org.ini4j.spi;
 import org.ini4j.Config;
 import org.ini4j.Profile;
 import org.ini4j.Reg;
-
 import org.ini4j.Registry.Key;
 import org.ini4j.Registry.Type;
 
@@ -56,12 +55,14 @@ public class RegBuilder extends AbstractProfileBuilder
         }
     }
 
-    @Override Config getConfig()
+    @Override
+    protected Config getConfig()
     {
         return _reg.getConfig();
     }
 
-    @Override Profile getProfile()
+    @Override
+    protected Profile getProfile()
     {
         return _reg;
     }

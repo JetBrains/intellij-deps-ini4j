@@ -109,13 +109,29 @@ abstract class AbstractProfileBuilder implements IniHandler
         _header = false;
     }
 
-    abstract Config getConfig();
+    protected abstract Config getConfig();
 
-    abstract Profile getProfile();
+    protected abstract Profile getProfile();
 
-    Profile.Section getCurrentSection()
+    protected Profile.Section getCurrentSection()
     {
         return _currentSection;
+    }
+
+    protected boolean isHeader() {
+        return _header;
+    }
+
+    protected void setHeader(boolean value) {
+        _header = value;
+    }
+
+    protected String getLastComment() {
+        return _lastComment;
+    }
+
+    protected void setLastComment(String value) {
+        _lastComment = value;
     }
 
     private void setHeaderComment()
