@@ -88,17 +88,17 @@ public class CommonMultiMap<K, V> extends BasicMultiMap<K, V> implements Comment
         return (String) removeMeta(META_COMMENT, key);
     }
 
-    Object getMeta(String category, Object key)
+    public Object getMeta(String category, Object key)
     {
         return (_meta == null) ? null : _meta.get(makeKey(category, key));
     }
 
-    Object putMeta(String category, K key, Object value)
+    public Object putMeta(String category, K key, Object value)
     {
         return meta().put(makeKey(category, key), value);
     }
 
-    void removeMeta(Object key)
+    public void removeMeta(Object key)
     {
         if (_meta != null)
         {
@@ -106,7 +106,7 @@ public class CommonMultiMap<K, V> extends BasicMultiMap<K, V> implements Comment
         }
     }
 
-    Object removeMeta(String category, Object key)
+    public Object removeMeta(String category, Object key)
     {
         return (_meta == null) ? null : _meta.remove(makeKey(category, key));
     }
