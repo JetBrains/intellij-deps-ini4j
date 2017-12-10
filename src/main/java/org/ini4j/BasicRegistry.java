@@ -15,8 +15,6 @@
  */
 package org.ini4j;
 
-import org.ini4j.Profile.Section;
-
 import org.ini4j.spi.IniHandler;
 import org.ini4j.spi.RegEscapeTool;
 import org.ini4j.spi.TypeValuesPair;
@@ -86,7 +84,8 @@ public class BasicRegistry extends BasicProfile implements Registry
         return new BasicRegistryKey(this, name);
     }
 
-    @Override void store(IniHandler formatter, Section section, String option)
+    @Override
+    protected void store(IniHandler formatter, Section section, String option)
     {
         store(formatter, section.getComment(option));
         Type type = ((Key) section).getType(option, Type.REG_SZ);
