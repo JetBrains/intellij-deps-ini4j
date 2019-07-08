@@ -16,15 +16,15 @@
 
 -->
 <component name="libraryTable">
-  <library name="Maven: org.beanshell:bsh:2.0b4">
+  <library name="Maven: org.apache-extras.beanshell:bsh:2.0b6">
     <CLASSES>
-      <root url="jar://$MAVEN_REPOSITORY$/org/beanshell/bsh/2.0b4/bsh-2.0b4.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache-extras/beanshell/bsh/2.0b6/bsh-2.0b6.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://$MAVEN_REPOSITORY$/org/beanshell/bsh/2.0b4/bsh-2.0b4-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache-extras/beanshell/bsh/2.0b6/bsh-2.0b6-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://$MAVEN_REPOSITORY$/org/beanshell/bsh/2.0b4/bsh-2.0b4-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache-extras/beanshell/bsh/2.0b6/bsh-2.0b6-sources.jar!/" />
     </SOURCES>
   </library>
 </component>
